@@ -7,15 +7,30 @@
 
 目前只支持`Get`请求，为了[`BookStack`](https://www.bookstack.cn)的采集功能而开发
 
+## 打包
+
+打包成 Linux 命令
+```
+bee pack -be GOOS=linux 
+```
+
+打包成 Windows 命令 
+```
+bee pack -be GOOS=windows
+```
+
 ## 使用
 
-启动服务，监听 8080 端口
+启动服务，监听 8101 端口
 ```
-./http-transfer 8080
+tar zxvf http-transfer.tar.gz
+cd http-transfer
+chmod 777 http-transfer
+./http-transfer 8101
 ```
 
-请求百度的logo
+例如：请求百度的logo
 
 ```
-http://localhost:8080/https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png?where=super
+http://localhost:8101/https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png?where=super
 ```
